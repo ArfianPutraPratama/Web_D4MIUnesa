@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* This allows the content to grow and push the footer to the bottom */
+    background-color: #ffffff;  
+}
+
+.footer {
+    background-color: #121212;
+    color: white;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+    padding-left: 60px;  /* Moves content slightly more inward from the left */
+    padding-right: 60px; /* Moves content slightly more inward from the right */
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+}
+
+.contact-text {
+    width: 40%; /* Adjust the percentage to control left section size */
+    padding-right: 20px; /* Space between left and right sections */
+}
+
+.contact-text h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.contact-info {
+    width: 35%;
+    text-align: right;
+    padding-left: 20px; /* Space between the two sections */
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #00A1FF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.social-media a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+}

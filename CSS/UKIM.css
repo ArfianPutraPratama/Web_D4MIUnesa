@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 0px;
+}
+
+.content-container, .container {
+  max-width: 1200px;
+  margin: 20px;
+  padding: 20px;
+  width: 80%;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 20px;
+}
+
+.article {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-content {
+  display: flex; /* Pastikan konten gambar dapat digeser */
+  justify-content: center; /* Pusatkan gambar */
+  margin-top: 20px; /* Tambahkan margin atas untuk memberi jarak */
+}
+
+
+.image-content img {
+  width: 70%;
+  /* Gambar akan mengambil lebar penuh dari kontainer */
+  max-width: 400px;
+  /* Ukuran maksimum gambar */
+  height: auto;
+  /* Tinggi otomatis untuk menjaga proporsi */
+  border-radius: 10px;
+  /* Sudut melengkung */
+  object-fit: cover;
+  /* Memastikan gambar tetap proporsional */
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.05); /* Memperbesar gambar saat di-hover */
+  cursor: zoom-out;
+}
+
+.image-content:hover img {
+  transform: scale(1.05); /* Memperbesar gambar menjadi 1.5x */
+  cursor: move; /* Tampilkan cursor yang menunjukkan bisa digeser */
+}
+.tag {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.post-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.share {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #333;
+}
+
+.share-text {
+  font-size: 0.9em;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.article-body p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1em;
+  color: #333;
+}
+
+.first-paragraph {
+  position: relative;
+  text-align: justify;
+}
+
+.dropcap {
+  font-size: 3em;
+  font-weight: bold;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+  color: #333;
+}
+
+.popup {
+  display: none; /* Sembunyikan pop-up secara default */
+  position: fixed; /* Posisi tetap di tengah */
+  z-index: 1000; /* Pastikan pop-up di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%; /* Lebar penuh */
+  height: 100%; /* Tinggi penuh */
+  background-color: rgba(0, 0, 0, 0.8); /* Latar belakang hitam transparan */
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Mulai dengan transparan */
+  transform: scale(0.8); /* Mulai dengan skala kecil */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Transisi halus untuk opacity dan transform */
+}
+
+.popup.show {
+  display: flex; /* Tampilkan pop-up saat kelas 'show' ditambahkan */
+  opacity: 1; /* Ubah ke penuh */
+  transform: scale(1); /* Ubah ke skala normal */
+}
+
+.popup img {
+  max-width: 90%; /* Ukuran maksimum gambar di dalam pop-up */
+  max-height: 90%; /* Ukuran maksimum tinggi gambar */
+  width: auto; /* Lebar otomatis untuk responsivitas */
+  height: auto; /* Tinggi otomatis untuk responsivitas */
+  position: relative; /* Posisi relatif untuk penempatan tombol X */
+}
+
+.close {
+  position: absolute; /* Penempatan tombol tutup */
+  top: 10px; /* Jarak dari atas */
+  right: 20px; /* Jarak dari kanan */
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001; /* Pastikan tombol X di atas gambar */
+}
+
+/* Media query untuk perangkat kecil */
+@media (max-width: 480px) {
+  .close {
+      font-size: 24px; /* Ukuran font lebih kecil pada perangkat kecil */
+      top: 5px; /* Jarak dari atas lebih kecil */
+      right: 10px; /* Jarak dari kanan lebih kecil */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container, .content-container {
+    width: 90%;
+  }
+
+  .article {
+    flex-direction: column;
+  }
+
+  .image-content img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.contact-btn {
+  display: block; /* Atur sebagai block element */
+  width: fit-content; /* Agar hanya mengambil lebar sesuai konten */
+  background-color: #f89b21;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+

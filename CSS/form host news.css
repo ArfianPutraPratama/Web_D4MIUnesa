@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#popup-form {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  /* Mengatur form menjadi dua kolom */
+  justify-content: space-between;
+  /* Ruang antar kolom */
+}
+
+.left-container,
+.right-container {
+  flex: 1;
+  /* Setiap container mengambil ruang yang sama */
+  margin: 10px;
+  /* Ruang antar container */
+  padding: 10px;
+  /* Padding dalam container */
+  border: 1px solid #ccc;
+  /* Border untuk setiap container */
+  border-radius: 8px;
+  /* Sudut melengkung */
+  background-color: #fff;
+  /* Latar belakang putih */
+}
+
+label {
+  display: block;
+  /* Pastikan label berada di atas input */
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+  width: 100%;
+  /* Lebar input 100% dari kolom */
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button#close-popup {
+  background-color: #dc3545;
+  margin-top: 10px;
+}
+
+button#close-popup:hover {
+  background-color: #c82333;
+}

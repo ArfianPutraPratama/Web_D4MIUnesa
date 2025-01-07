@@ -1,0 +1,517 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+/* Css Slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    height: 800px;
+    overflow: hidden;
+}
+
+.slides {
+    display: none;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.slider .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    /* Membuat teks muncul di atas overlay */
+}
+
+/* Menambahkan overlay gelap di belakang teks untuk membuat tulisan lebih terlihat */
+.slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.516);
+    /* Lapisan gelap pada gambar background */
+    z-index: 0;
+    /* Letakkan overlay di belakang teks */
+}
+
+/* Styling untuk "Welcome to" */
+.small-text {
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Garis di bawah "Welcome to" */
+.line {
+    width: 200px;
+    height: 3px;
+    background-color: rgb(251, 198, 23);
+    margin: 0 auto 10px auto;
+    /* Garis di tengah dengan margin bawah */
+}
+
+/* Teks besar untuk "MI 23A" */
+.main-title {
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+    /* Tambah sedikit margin bawah untuk tombol */
+}
+
+.active {
+    display: block;
+}
+
+.dot-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot {
+    background-color: #717171;
+}
+
+
+/* CSS untuk layout "tentang kami" */
+.tentang-kami {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.konten-tentang {
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.konten-tentang h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.konten-tentang p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.gambar-tentang {
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gambar-tentang img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .tentang-kami {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .konten-tentang {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .gambar-tentang {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+
+/* Container for the Visi and Misi section */
+.visi-misi {
+    position: relative;
+    /* Menambahkan posisi relatif untuk overlay */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url('https://lh5.googleusercontent.com/p/AF1QipMGJs3DC7ZfBUJVQBKmXq_yqHZsC6OMEfW-15si=w598-h336-p-k-no');
+    /* Ganti URL-GAMBAR-ANDA dengan URL gambar Anda */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    width: 100%;
+    height: 750px;
+    min-height: 600px;
+    max-height: 1000px;
+    padding: 2rem;
+    z-index: 1;
+    /* Menyusun layer agar teks tetap terlihat di atas overlay */
+}
+
+.visi-misi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Warna hitam dengan opacity 50% */
+    z-index: -1;
+    /* Menempatkan overlay di belakang konten */
+}
+
+
+/* Visi and Misi content styling */
+.visi-content {
+    flex: 1;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+/* Visi title */
+.visi-content h2 {
+    color: #f39c12;
+    /* Orange color for Visi and Misi headings */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-family: sans-serif;
+
+}
+
+/* ISLAMI, BERPRESTASI DAN HUMANIS styling */
+.visi-content h1 {
+    font-size: larger;
+    color: #ecf0f1;
+    /* Lighter text color */
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: normal;
+
+}
+
+/* Misi text */
+.visi-content p {
+    font-size: larger;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+    /* Light color for the Misi text */
+    font-weight: normal;
+    text-align: center;
+}
+
+.backshadow {
+    background-color: #00000074;
+}
+
+/* Image styling */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .visi-misi {
+        flex-direction: column;
+        height: auto;
+        /* Reset to auto on small screens */
+    }
+
+    .visi-content,
+    .image-content {
+        padding: 1rem;
+    }
+
+    .visi-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .visi-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling untuk judul bagian event */
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling Galeri Event */
+.galeri-event {
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.galeri-header h2 {
+    font-size: 2.5em;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    color: #f39c12;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    /* Bayangan dengan blur 5px */
+
+}
+
+.galeri-header p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.galeri-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.galeri-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.galeri-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay for text */
+.galeri-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Dark overlay */
+    transition: background-color 0.2s ease;
+}
+
+.galeri-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Centered text */
+.galeri-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* News content */
+.container {
+    width: 100%;
+    /* Membuat container selebar halaman */
+    max-width: 80%;
+    padding: 0 20px;
+    /* Tambahkan padding untuk memberikan jarak sedikit dari sisi */
+    margin-bottom: 80px;
+    /* Tambahkan margin untuk memberi ruang bagi footer */
+    margin-top: 90px;
+
+}
+
+.main-content h2 {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    /* Bayangan dengan blur 2px */
+}
+
+.main-content h2 .hot {
+    color: #3737bc;
+    /* Warna teks "Hot" menjadi biru */
+}
+
+.main-content h2 .news {
+    color: orange;
+    /* Warna teks "News" menjadi oranye */
+}
+
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-item {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.news-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+.news-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.news-details h3 {
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+.news-meta {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.news-meta span {
+    margin-right: 10px;
+}
+
+
+.news-item {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Transisi halus untuk transformasi dan bayangan */
+}
+
+.news-item:hover {
+    transform: scale(1.02);
+    /* Memperbesar elemen sedikit saat di-hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih dalam saat di-hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        margin-right: 0;
+    }
+
+}
+
+
+.see-more-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.see-more-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.see-more-link:hover {
+    text-decoration: underline;
+}
+
+

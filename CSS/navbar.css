@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    z-index: 1000; /* Tetap di atas elemen lain, termasuk slider */
+    padding: 10px 0; /* Tingkatkan padding untuk memperbesar navbar */
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar-logo img {
+    width: 110px; /* Sesuaikan ukuran logo dengan preferensi kamu */
+    height: auto;
+}
+
+.navbar .navbar-menu ul {
+    display: flex;
+    gap: 40px; /* Tambahkan lebih banyak ruang antar item */
+}
+
+.navbar .navbar-menu ul li {
+    display: inline-block;
+}
+
+.navbar .navbar-menu ul li a {
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 20px; /* Perbesar ukuran font link */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.navbar .navbar-menu ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #f39c12;
+}
+
+.navbar-social i {
+    color: #f39c12;
+    font-size: 28px; /* Perbesar ukuran icon sosial media */
+}
+
+.navbar-toggle-checkbox {
+    display: none;
+}
+
+.navbar-toggle-label {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu ul {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar-toggle-label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar-toggle-label span {
+        display: block;
+        width: 30px; /* Memperbesar hamburger icon */
+        height: 4px; /* Perbesar garis hamburger icon */
+        background-color: #f39c12;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
+    .navbar-toggle-checkbox:checked + .navbar-toggle-label + .navbar-menu ul {
+        display: flex;
+    }
+
+    .navbar-social {
+        display: none;
+    }
+}
+/* Gaya tombol Login dan Logout agar ukurannya sama persis */
+.transparent-button-white {
+    display: inline-flex; /* Membuat kontainer fleksibel */
+    align-items: center; /* Memusatkan teks secara vertikal */
+    justify-content: center; /* Memusatkan teks secara horizontal */
+    width: 150px; /* Lebar tetap untuk semua tombol */
+    height: 50px; /* Tinggi tetap untuk semua tombol */
+    padding: 0; /* Hapus padding untuk memastikan ukuran seragam */
+    font-size: 18px; /* Ukuran teks sama */
+    font-weight: bold; /* Ketebalan teks sama */
+    color: #f39c12; /* Warna teks */
+    background-color: transparent; /* Latar belakang transparan */
+    border: 2px solid #f39c12; /* Border konsisten */
+    text-decoration: none; /* Hilangkan garis bawah */
+    text-align: center; /* Teks rata tengah */
+    border-radius: 5px; /* Sudut tombol sedikit membulat */
+    transition: all 0.3s ease; /* Animasi hover */
+    box-sizing: border-box; /* Termasuk border dalam ukuran */
+}
+
+.transparent-button-white:hover {
+    background-color: #f39c12; /* Warna latar saat hover */
+    color: #fff; /* Warna teks saat hover */
+    border-color: #f39c12; /* Border tetap konsisten */
+}
+
+
+
